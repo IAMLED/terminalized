@@ -248,13 +248,13 @@ function CongratsOverlay({ levelData, score, onNext, reason = 'flag' }) {
           : `Level ${levelData.id} of 7 complete — flag captured!`}
       </div>
 
-      {/* Flag chip */}
+      {/* Flag chip
       <div style={{ padding:"8px 18px", background:"#50fa7b0d",
         border:"1px solid #50fa7b44", borderRadius:"6px",
         fontFamily:"'Share Tech Mono',monospace", fontSize:"12px",
         color:"#50fa7b", marginBottom:"22px", letterSpacing:"1px" }}>
         ✓ {levelData.flag}
-      </div>
+      </div> */}
 
       {/* Stats */}
       <div style={{ display:"flex", gap:"28px", marginBottom:"30px" }}>
