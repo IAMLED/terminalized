@@ -1,6 +1,7 @@
 // src/App.jsx
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import { GameProvider } from "./context/GameContext";
 import Welcome  from "./pages/Welcome";
 import Game     from "./pages/Game";
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="/gameover" element={<GameOver />} />
           <Route path="*"         element={<Navigate to="/" replace />} />
         </Routes>
+        <Analytics />
       </BrowserRouter>
     </GameProvider>
   );
