@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base layer overrides */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body, #root {
+    height: 100%;
+    background: #0d1117;
+    color: #f8f8f2;
+  }
+  body {
+    font-family: 'Share Tech Mono', 'Courier New', Courier, monospace;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar      { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track{ background: #0d1117; }
+  ::-webkit-scrollbar-thumb{ background: #30363d; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #484f58; }
+  button { cursor: pointer; }
+  ::selection { background: rgba(80,250,123,0.2); color: #50fa7b; }
+}
+
+/* Reusable utility-pattern classes */
+@layer components {
+  .panel       { @apply bg-panel border border-border rounded-lg; }
+  .panel-sm    { @apply bg-panel border border-border rounded-md; }
+  .btn-ghost   { @apply px-3 py-1.5 text-[11px] uppercase tracking-widest border border-border text-textMuted rounded transition hover:border-green hover:text-green; }
+  .btn-primary { @apply px-6 py-3 font-orbitron font-bold tracking-[3px] uppercase border-2 border-green text-green rounded transition hover:bg-green hover:text-bg; }
+  .btn-danger  { @apply px-6 py-3 font-orbitron font-bold tracking-[3px] uppercase border-2 border-red text-red rounded transition hover:bg-red hover:text-bg; }
+}
